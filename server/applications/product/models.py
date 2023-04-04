@@ -1,6 +1,6 @@
 from django.db import models
 
-class product(models.Model):
+class Product(models.Model):
     design_no = models.CharField(max_length=50, unique=True)
     name = models.CharField(max_length=255)
     material = models.CharField(max_length=255)
@@ -11,8 +11,8 @@ class product(models.Model):
     button_charges = models.DecimalField(max_digits=10, decimal_places=2)
     packing_charges = models.DecimalField(max_digits=10, decimal_places=2)
     zipper_charges = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='product_images')
-    thumbnail = models.ImageField(upload_to='product_thumbnails')
+    image = models.ImageField(upload_to='product_images', null=True, blank=True)
+    thumbnail = models.ImageField(upload_to='product_thumbnails', null=True, blank=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

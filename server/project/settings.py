@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'django_rest_passwordreset',
     'corsheaders',
     'applications.account.apps.AccountConfig',
-    # 'appplications.product.apps.ProductConfig',
-    'product'
+    'applications.product.apps.ProductConfig',
 ]
 
 MIDDLEWARE = [

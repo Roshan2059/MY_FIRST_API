@@ -10,6 +10,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/account/', include('applications.account.urls'),),
+    path('', include('applications.product.urls'),),
 
 
 ] + static(settings.MEDIA_URL,
